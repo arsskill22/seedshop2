@@ -1,6 +1,6 @@
 $('#comment-form').submit(function(event) {
     event.preventDefault();
-    let tunel = 'https://aa13-46-138-38-176.ngrok-free.app'
+    let tunel = ' https://1694-46-138-38-176.ngrok-free.app'                  '
 
     var username = $('#username').val();
     var comment = $('#comment').val();
