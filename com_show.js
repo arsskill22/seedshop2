@@ -1,12 +1,13 @@
 $('#comment-form').submit(function(event) {
     event.preventDefault();
+    let tunel = 'https://aa13-46-138-38-176.ngrok-free.app'
 
     var username = $('#username').val();
     var comment = $('#comment').val();
     
     // Отправка POST запроса с комментариями
     $.ajax({
-        url: 'https://c124-46-138-38-176.ngrok-free.app/', 
+        url: tunel + '/', 
         method: 'POST',
         data: {
             username: username,
@@ -29,7 +30,7 @@ $('#comment-form').submit(function(event) {
 function loadComments() {
     // GET запрос для загрузки комментариев
     $.ajax({
-        url: 'https://c124-46-138-38-176.ngrok-free.app/',  // URL для получения комментариев
+        url: tunel + '/',  // URL для получения комментариев
         method: 'GET',
         headers: {
             'ngrok-skip-browser-warning': 'true'  // Добавляем заголовок для обхода предупреждающей страницы
