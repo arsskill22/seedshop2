@@ -21,13 +21,13 @@ $('#comment-form').submit(function(event) {
     });
 });
 
-function loadComments() {
+function loadComments() { 
     $.get('https://89dd-46-138-38-176.ngrok-free.app/', function(data) {
         console.log('Полученные данные от сервера (GET):', data);  // Логируем данные
 
         $('#comments-container').empty(); 
 
-        if (data.comments && data.comments.length > 0) {
+        if (data.comments && Array.isArray(data.comments) && data.comments.length > 0) {
             data.comments.forEach(function(comment) {
                 var commentHTML = `
                     <div class="comment">
@@ -45,7 +45,6 @@ function loadComments() {
     });
 }
 
-
 $(document).ready(function() {
     loadComments();  
-});            
+}); 
