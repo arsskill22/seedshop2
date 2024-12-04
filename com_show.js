@@ -12,6 +12,9 @@ $('#comment-form').submit(function(event) {
             username: username,
             comment: comment
         },
+        headers: {
+            'ngrok-skip-browser-warning': 'true'  // Добавляем заголовок для обхода предупреждающей страницы
+        },
         success: function(response) {
             console.log('Ответ от сервера (POST):', response);
             loadComments();  // Загружаем комментарии после успешного POST запроса
@@ -28,6 +31,9 @@ function loadComments() {
     $.ajax({
         url: 'https://c124-46-138-38-176.ngrok-free.app/',  // URL для получения комментариев
         method: 'GET',
+        headers: {
+            'ngrok-skip-browser-warning': 'true'  // Добавляем заголовок для обхода предупреждающей страницы
+        },
         success: function(data) {
             console.log('Полученные данные от сервера (GET):', data);
             
