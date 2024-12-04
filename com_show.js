@@ -4,7 +4,7 @@ $('#comment-form').submit(function(event) {
     var username = $('#username').val();
     var comment = $('#comment').val();
     $.ajax({
-        url: 'https://89dd-46-138-38-176.ngrok-free.app/', 
+        url: 'https://c124-46-138-38-176.ngrok-free.app/', 
         method: 'POST',
         data: {
             username: username,
@@ -22,7 +22,7 @@ $('#comment-form').submit(function(event) {
 });
 
 function loadComments() {
-    $.get('https://89dd-46-138-38-176.ngrok-free.app/', function(data) {
+    $.get('https://c124-46-138-38-176.ngrok-free.app/', function(data) {
         console.log('Полученные данные от сервера (GET):', data);
 
         $('#comments-container').empty(); 
