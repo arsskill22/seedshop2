@@ -1,13 +1,12 @@
 $('#comment-form').submit(function(event) {
     event.preventDefault();
-    let tunel = 'https://1694-46-138-38-176.ngrok-free.app'                  '
 
     var username = $('#username').val();
     var comment = $('#comment').val();
     
     // Отправка POST запроса с комментариями
     $.ajax({
-        url:'https://1694-46-138-38-176.ngrok-free.app/', 
+        url: 'https://1694-46-138-38-176.ngrok-free.app/', 
         method: 'POST',
         data: {
             username: username,
