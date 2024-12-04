@@ -7,7 +7,7 @@ $('#comment-form').submit(function(event) {
     
     // Отправка POST запроса с комментариями
     $.ajax({
-        url: tunel + '/', 
+        url:'https://1694-46-138-38-176.ngrok-free.app/', 
         method: 'POST',
         data: {
             username: username,
@@ -30,7 +30,7 @@ $('#comment-form').submit(function(event) {
 function loadComments() {
     // GET запрос для загрузки комментариев
     $.ajax({
-        url: tunel + '/',  // URL для получения комментариев
+        url: 'https://1694-46-138-38-176.ngrok-free.app/',  // URL для получения комментариев
         method: 'GET',
         headers: {
             'ngrok-skip-browser-warning': 'true'  // Добавляем заголовок для обхода предупреждающей страницы
