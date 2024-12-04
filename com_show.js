@@ -23,7 +23,7 @@ $('#comment-form').submit(function(event) {
 
 function loadComments() {
     $.get('https://89dd-46-138-38-176.ngrok-free.app/', function(data) {
-        console.log('Полученные данные от сервера (GET):', data);  
+        console.log('Полученные данные от сервера (GET):', data);  // Логируем данные
 
         $('#comments-container').empty(); 
 
@@ -44,6 +44,7 @@ function loadComments() {
         $('#comments-container').append('<p>Ошибка загрузки комментариев. Попробуйте позже.</p>');
     });
 }
+
 
 $(document).ready(function() {
     loadComments();  
