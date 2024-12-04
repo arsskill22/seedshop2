@@ -47,4 +47,4 @@ function loadComments() {
 
 $(document).ready(function() {
     loadComments();  
-}); 
+});             
