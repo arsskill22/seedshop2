@@ -6,7 +6,7 @@ $('#comment-form').submit(function(event) {
     
     // Отправка POST запроса с комментариями
     $.ajax({
-        url: 'https://1694-46-138-38-176.ngrok-free.app/', 
+        url: 'https://6365-2a00-1fa0-4101-fb02-98e8-34a7-8124-78ed.ngrok-free.app/', 
         method: 'POST',
         data: {
             username: username,
@@ -29,7 +29,7 @@ $('#comment-form').submit(function(event) {
 function loadComments() {
     // GET запрос для загрузки комментариев
     $.ajax({
-        url: 'https://1694-46-138-38-176.ngrok-free.app/',  // URL для получения комментариев
+        url: 'https://6365-2a00-1fa0-4101-fb02-98e8-34a7-8124-78ed.ngrok-free.app/',  // URL для получения комментариев
         method: 'GET',
         headers: {
             'ngrok-skip-browser-warning': 'true'  // Добавляем заголовок для обхода предупреждающей страницы
